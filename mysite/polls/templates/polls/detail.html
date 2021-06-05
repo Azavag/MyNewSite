@@ -8,16 +8,18 @@
         <form action="{% url 'polls:vote' question.id %}" method="post">
             {% csrf_token %}
             {% for choice in question.choice_set.all %}
-                <p align="left" style="color:black; font-size:20px">
+                <p align="center" style="color:black; font-size:20px">
                 <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
                 <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
-                <a style="font-size:13px; color:blue" onclick="document.location='../../polls/{{ choice.id }}/update_choice'">Update choice</a>
-                <a style="font-size:13px; color:red" onclick="document.location='../../polls/{{ choice.id }}/delete_choice'">Delete choice</a>
+                <a style="font-size:13px; color:blue"
+                   onclick="document.location='../../polls/{{ choice.id }}/update_choice'">Редактировать вариант</a>
+                <a style="font-size:13px; color:red"
+                   onclick="document.location='../../polls/{{ choice.id }}/delete_choice'">Удалить вариант</a>
             {% endfor %}
-                <br><input type="submit" class="btn btn-success" style="width:300px" value="Vote">
-                    <p align="left">
-                <a class="btn btn-info" href="{% url 'polls:index' %}"><--Back to questions</a>
-                <a class="btn btn-warning" onclick="document.location='update'">Update poll</a>
-                <a class="btn btn-danger" onclick="document.location='delete'">Delete poll</a>
+                <br><input type="submit" class="btn btn-success" style="width:300px" value="Голосовать">
+                <p align="center">
+                <a style="font-size:18px; color:blue" class="btn btn-warning" onclick="document.location='update'">Обновить опрос</a>
+                <a style="font-size:18px; color:red" class="btn btn-danger" onclick="document.location='delete'">Удалить опрос</a>
+                <br><a class="btn btn-info" href="{% url 'polls:index' %}"><--Вернуться к опросам</a>
         </form>
 {% endblock %}

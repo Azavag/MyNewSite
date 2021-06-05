@@ -13,7 +13,7 @@
     {% endfor %}
     </ul>
 
-    <a class="btn btn-warning" href="{% url 'polls:detail' question.id %}">Vote again?</a>
-    <a class="btn btn-warning" href="{% url 'polls:index' %}">Back to questions</a>
+    <a class="btn btn-warning" href="{% url 'polls:detail' question.id %}">Проголосовать снова?</a>
+    <a class="btn btn-warning" href="{% url 'polls:index' %}">Назад к опросам</a>
 </div>
 {% endblock %}

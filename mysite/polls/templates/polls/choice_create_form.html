@@ -2,11 +2,11 @@
 {% block title %}Создание Блога{% endblock %}
 {% block content %}
 <div class="features">
-    <h1>Обновление вопроса</h1>
-    <form method="post" value="Create">
+    <h1>Редактирование опроса</h1>
+    <form method="post" value="Создать">
         {{ form.as_p }}
         {% csrf_token %}
-        <input type = "submit" value="Create">
+        <input type = "submit" value="Создать">
     </form>
 </div>
 {% endblock %}

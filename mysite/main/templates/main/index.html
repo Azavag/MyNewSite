@@ -3,17 +3,22 @@
 {% block content %}
 
   <style>
-
+   BODY
+   {
+    background: url("./images/css-fon.jpg") center center;
+   }
   </style>
     <div class="features">
         <h1>
-            <p style="color:#DC143C; font-size:50px">
+            <p style="color:#B0E0E6; font-size:50px">
             Главная страница
         </h1>
         <h2>
             <p style="color:#DC143C; font-size:15px">
-            <button class="btn btn-outline-warning" style="height:400px;width:400px" onclick="document.location='polls'">Мои опросы</button>
-            <button class="btn btn-outline-warning" style="height:400px;width:400px" onclick="document.location='blogs/'">Мои блоги</button>
+            <button class="btn btn-outline-warning" style="height:50px;width:300px"
+                    onclick="document.location='polls'">Мои опросы</button>
+            <button class="btn btn-outline-warning" style="height:50px;width:300px"
+                    onclick="document.location='blogs/'">Мои блоги</button>
         </h2>
     </div>
 {% endblock %}

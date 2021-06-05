@@ -1,19 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'polls/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'polls/static/polls/style.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="shortcut icon" href="static/polls/img/icon.ico" type="images/x-ico">
 </head>
 <body>
+
     <aside>
-        <img src="{% static 'polls/img/django-python.png' %}" alt="Django"><br>
         <!--<span class="django">My Site</span>-->
-        <h3><p align="left">Navigation</h3>
+        <h3><p align="left">Навигация по сайту</h3>
         <ul>
             <a onclick="document.location='../../main'"><li><i class="fas fa-home"></i> Главная</li></a>
             <a onclick="document.location='../../polls/'"><li><i class="fas fa-poll"></i> Мои вопросы</li></a>

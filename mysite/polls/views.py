@@ -17,7 +17,6 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:10]
-        #return Question.objects.order_by('-pub_date')[:5]
 
 
 def index(request):
@@ -35,7 +34,6 @@ def detail(request, question_id):
         question = Question.objects.get(pk=question_id)
     except Question.DoesNotExist:
         raise Http404("Question does not exist")
-    #return HttpResponse("You're looking to question", question_id)
     return render(request, 'polls/detail.html', {'question': question})
 
 
