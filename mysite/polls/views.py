@@ -23,11 +23,10 @@ class IndexView(generic.ListView):
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:10]
     template = loader.get_template('polls/index.html')
-    #output = ', '.join([q.question_text for q in latest_question_list])
+    output = ', '.join([q.question_text for q in latest_question_list])
     context = {
        'latest_question_list': latest_question_list,
     }
-    #return HttpResponse(template.render(context, request))
     return render(request, 'polls/index.html', context)
 
 

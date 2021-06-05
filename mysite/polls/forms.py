@@ -24,6 +24,6 @@ class CreateChoice(ModelForm):
         widgets = {
             "choice_text": TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Вопрос'
+                'placeholder': 'Вариант ответа'
             }),
         }

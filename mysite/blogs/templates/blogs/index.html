@@ -1,0 +1,25 @@
+{% extends 'polls/layout.html' %}
+
+{% block content %}
+<div class="INDEX">
+     <h1>
+        <p align="center" style="color:#DC143C; font-size:35px">
+        Blogs list
+    </h1>
+     <h2>
+        {% if latest_blog_list %}
+            <ul>
+            {% for blog in latest_blog_list %}
+               <p align="left" style="color:#DC143C; font-size:35px">
+               <p><li><a href="{% url 'blogs:detail' blog.id %}">{{ blog.title }}<br></a></li></p>
+            {% endfor %}
+            </ul>
+        {% else %}
+             <p>No blogs are available.</p>
+        {% endif %}
+     </h2>
+    <h4>
+<button class="btn btn-success" style="height:40px;width:120px" onclick="document.location='create'">Create blog</button>
+    </h4>
+</div>
+{% endblock %}
