@@ -1,7 +1,15 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+<style>
+ .bdy
+{
+ border: 4px groove black;
+    background: linear-gradient(90deg, #faf0cd, #fab397);
+    padding: 10px;
+}
 
+</style>
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
@@ -10,19 +18,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
-
-    <aside>
-        <!--<span class="django">My Site</span>-->
-        <h3><p align="left">Навигация по сайту</h3>
+<div class="bdy">
+        <h3><p align="center">Навигация по сайту</h3>
         <ul>
-            <a onclick="document.location='../../main'"><li><i class="fas fa-home"></i> Главная</li></a>
-            <a onclick="document.location='../../polls/'"><li><i class="fas fa-poll"></i> Мои вопросы</li></a>
-            <a onclick="document.location='../../blogs/'"><li><i class="fas fa-blog"></i> Мои блоги</li></a>
-            <br>User: {{ user.username }}
-            <a onclick="document.location='../../logout'"><li><i class="fas fa-sign-out-alt"></i> Выход</li></a><br>
-            <a onclick="document.location='../../admin'"><li><i class="fas fa-user-cog"></i> Панель админа</li></a><br>
+            <a class="btn btn-info" style="margin:10px" onclick="document.location='../../main'"><i class="fas fa-arrow-alt-circle-right"></i> Главная</a>
+            <a class="btn btn-info" style="margin:10px" onclick="document.location='../../polls/'"><i class="fas fa-arrow-alt-circle-right"></i> Мои опросы   </a>
+            <a class="btn btn-info" style="margin:10px"  onclick="document.location='../../blogs/'"><i class="fas fa-arrow-alt-circle-right"></i> Мои блоги</a>
+            <a class="btn btn-info" style="margin:10px" onclick="document.location='../../logout'"><i class="fas fa-arrow-alt-circle-right"></i> Выход</a>
+            <a class="btn btn-info" style="margin:10px" onclick="document.location='../../admin/'"><i class="fas fa-arrow-alt-circle-right"></i> Панель админа</a><br>
+            <a style="font: normal small-caps 30px; margin:10px"> На сайте под именем: {{ user.username }} </a>
         </ul>
-    </aside>
+    </div>
     <main>
     {% block content %}
     {% endblock %}

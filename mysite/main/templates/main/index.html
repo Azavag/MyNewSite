@@ -3,22 +3,29 @@
 {% block content %}
 
   <style>
-   BODY
-   {
-    background: url("./images/css-fon.jpg") center center;
-   }
+        BODY
+        {
+        background-blend-mode: screen;
+	    background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
+		}
   </style>
     <div class="features">
         <h1>
-            <p style="color:#B0E0E6; font-size:50px">
+            <p style="color:#FF7F50; font-size:50px" align=center>
             Главная страница
         </h1>
         <h2>
-            <p style="color:#DC143C; font-size:15px">
+            <p style="color:#FF7F50; font-size:16px" align=center>
             <button class="btn btn-outline-warning" style="height:50px;width:300px"
-                    onclick="document.location='polls'">Мои опросы</button>
+                    onclick="document.location='polls/'">Мои опросы</button>
             <button class="btn btn-outline-warning" style="height:50px;width:300px"
                     onclick="document.location='blogs/'">Мои блоги</button>
         </h2>
     </div>
+<h4>
+            <p style="margin-top:224px">
+</h4>
 {% endblock %}

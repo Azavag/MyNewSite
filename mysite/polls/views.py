@@ -85,6 +85,7 @@ def success_saved(request):
 class Update(UpdateView):
     model = Question
     pk_url_kwarg = "question_id"
+    success_url = './'
     template_name = 'polls/update.html'
     form_class = CreateForm
 

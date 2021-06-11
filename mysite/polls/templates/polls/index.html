@@ -1,11 +1,15 @@
 {% extends 'polls/layout.html' %}
 {% block content %}
-<style>
-    body
-    {
-    background: url("./images/css-fon.jpg") center center;
-    }
-</style>
+  <style>
+   BODY
+   {
+    background-blend-mode: screen;
+	background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
+   }
+  </style>
 
     <div class="INDEX">
         <h1>
@@ -22,16 +26,20 @@
             </ul>
 
             <h3>
-                <button class="btn btn-success" style="height:40px;width:120px"
+                <button class="btn btn-success"
                         onclick="document.location='create'">Создать опрос</button>
-                <button class="btn btn-success" style="height:40px;width:150px"
+                <button class="btn btn-success"
                         onclick="document.location='create_choice'">Создать вариант ответа</button>
             </h3>
 
             {% else %}
         </h2>
-            <p>Нет дотсупных опросов.</p>
+            <p>Нет доступных опросов.</p>
         {% endif %}
+        <h4>
+            <p style="margin-top:89px">
+
+        </h4>
     </div>
 
 {% endblock %}

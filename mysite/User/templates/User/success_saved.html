@@ -1,7 +1,13 @@
  <style>
-   BODY {
-    background: linear-gradient(to bottom right, #f1da36, #6A6AD2) no-repeat;
-   }
+        BODY
+        {
+        background-blend-mode: screen;
+	    background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
+		}
+
   </style>
     {% load static %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -10,9 +16,9 @@
     <div class="features">
         <h1>
             <p align="center" style="font-size: 40px; margin-top: 100px">
-        User was created<br>
+        Пользователь был зарегистрирован<br>
             <p align="center" style="font-size: 20px">
-        So you can log in <br>
+        Теперь вы можете войти на сайт <br>
         </h1>
              <p align="center" style="font-size: 40px; margin-top: 100px">
             <button class="btn btn-outline-light" style="height:100px;width:400px"

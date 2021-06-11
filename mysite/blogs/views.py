@@ -34,7 +34,7 @@ def create(request):
             form.save()
             return HttpResponseRedirect(reverse('blogs:success_saved'))
         else:
-            error = 'Wrong form filling'
+            error = 'Неправмльная форма'
 
     form = CreateForm()
     data = {
@@ -51,6 +51,7 @@ def success_saved(request):
 class Update(UpdateView):
     model = Blog
     pk_url_kwarg = "Blog_id"
+    success_url = '/blogs/'
     template_name = 'blogs/update.html'
     form_class = CreateForm
 

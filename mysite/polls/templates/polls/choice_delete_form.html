@@ -1,6 +1,16 @@
 {% extends 'polls/layout.html' %}
 {% block title %}Создание Блога{% endblock %}
 {% block content %}
+<style>
+   BODY
+   {
+    background-blend-mode: screen;
+	background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
+   }
+  </style>
 <div class="features">
     <h1>
         Удаление ответа<br>
@@ -11,4 +21,8 @@
         <button class="btn btn-danger" type="submit">Удалить ответ</button>
     </form>
 </div>
+<h4>
+            <p style="margin-top:208px">
+
+        </h4>
 {% endblock %}

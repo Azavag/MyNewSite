@@ -1,21 +1,28 @@
- <style>
-       BODY
-       {
-        background: #55CBFC;
-       }
-  </style>
-    {% load static %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <style>
+     BODY
+   {
+    background: url("./images/css-fon.jpg") center center;
+   }
+</style>
+<head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'polls/static/polls/css/main.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+   <body>
     <div class="features">
         <h1>
             <p align="center" style="font-size: 40px; margin-top: 100px">
-        You logged out<br>
+        Вы вышли с аккаунта<br>
             <p align="center" style="font-size: 20px">
-        You can log in again or register as a new user <br>
+        Вы можете создать нового пользователя или войти как существующий <br>
         </h1>
              <p align="center" style="font-size: 40px; margin-top: 100px">
             <button class="btn btn-outline-info" style="height:100px;width:400px"
                     onclick="document.location='../../'">Ok</button>
     </div>
+   </body>
+</html>

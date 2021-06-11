@@ -2,23 +2,30 @@
 
 {% block content %}
         <style>
-           figure {
+        BODY
+        {
+        background-blend-mode: screen;
+	    background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
+		}
+           figure
+           {
                 height: 595px;
                 margin: 0;
                 overflow: hidden;
            }
-           figure img {
+           figure img
+           {
                 width: 100%;
                 margin: -10% 0 0 0;
-           #glaw {
+           #glaw
+           {
                display:inline;
                width:880px;
            }
-           }
-           .blok1, .blok2 {
-                border-radius: 4px;
-                box-shadow: rgba(0,0,0,1.2) 0px 1px 3px;
-           }
+
            .blok1 {
               float:left;
               width:600px;
@@ -55,13 +62,14 @@
                         {{ blog.task }}
                     </div>
                     <p align="right" style="color:#DC143C; font-size:20px">
-                    Was published: {{ blog.pub_date }}
-            </div><br>
+                    Опубликован: {{ blog.pub_date }}
+            </div>
+            <br>
                 <h3>
                     <p align="center" style="margin-top: 640px">
-                    <button class="btn btn-info" style="width:350px" onclick="document.location='../'"><---Back to Blogs</button>
-                    <button class="btn btn-warning" style="width:350px" onclick="document.location='update'">Update blog</button>
-                    <button class="btn btn-danger" style="width:350px" onclick="document.location='delete'">Delete blog</button>
+                    <button class="btn btn-info" style="width:350px" onclick="document.location='../'"><---Назад к списку</button>
+                    <button class="btn btn-warning" style="width:350px" onclick="document.location='update'">Редактировать блог</button>
+                    <button class="btn btn-danger" style="width:350px" onclick="document.location='delete'">Удалить блог</button>
                 </h3>
         </div>
 {% endblock %}

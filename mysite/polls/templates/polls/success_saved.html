@@ -3,10 +3,16 @@
 {% block content %}
 
   <style>
-       BODY
-       {
-        background: white;
-       }
+
+   BODY
+   {
+    background-blend-mode: screen;
+	background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
+   }
+
   </style>
 <div class="features">
     <h1>
@@ -16,4 +22,7 @@
         <button class="btn btn-outline-warning" style="height:50px;width:200px" onclick="document.location='../../polls/'">К вопросам</button>
     </h2>
    </div>
+<h4>
+            <p style="margin-top:243px">
+</h4>
 {% endblock %}

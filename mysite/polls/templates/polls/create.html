@@ -1,5 +1,16 @@
+{% extends 'polls/layout.html' %}
 {% block title %}Создание Блога{% endblock %}
 {% block content %}
+<style>
+   BODY
+   {
+    background-blend-mode: screen;
+	background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
+   }
+  </style>
 <div class="features">
     <h1>Создание Опроса</h1>
     <form method="post">
@@ -10,4 +21,8 @@
         <button class="btn btn-success" type="submit">Добавить опрос</button>
     </form>
 </div>
+<h4>
+            <p style="margin-top:140px">
+
+</h4>
 {% endblock %}

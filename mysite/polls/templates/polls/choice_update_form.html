@@ -1,12 +1,25 @@
 {% extends 'polls/layout.html' %}
 {% block title %}Создание Блога{% endblock %}
 {% block content %}
+<style>
+   BODY
+   {
+    background-blend-mode: screen;
+	background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
+   }
+  </style>
 <div class="features">
-    <h1>Создание Опроса</h1>
+    <h1>Редактирование варианта</h1>
     <form method="post" value="Update">
         {{ form.as_p }}
         {% csrf_token %}
-        <input type = "submit" value="Update">
+        <input type = "submit" value="Редактировать">
     </form>
 </div>
+<h4>
+            <p style="margin-top:163px">
+</h4>
 {% endblock %}
